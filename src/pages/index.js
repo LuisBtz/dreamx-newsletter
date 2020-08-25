@@ -1,5 +1,9 @@
 import React from "react"
+import LeftContainer from "../components/left"
+import Layout from "../components/layout"
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+export default () => (
+  <Layout>
+    <LeftContainer />
+  </Layout>
+)
