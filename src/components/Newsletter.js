@@ -1,12 +1,33 @@
 import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import styled from "styled-components"
+
+const Form = styled.form`
+  input {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #efefef;
+    border: none;
+  }
+  button {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #0d0d0d;
+    color: white;
+    border: none;
+    font-size: 1rem;
+  }
+`
 
 class Newsletter extends React.Component {
   constructor() {
     super()
     this.state = {
-      message:
-        "Suscríbete a nuestro Newsletter y recibe noticias y promociones de nuestros servicios!",
+      message: "",
       name: "",
       email: "",
       result: null,
@@ -55,34 +76,32 @@ class Newsletter extends React.Component {
   render() {
     return (
       <>
-        <div className="center">
-          <h2>{this.state.message}</h2>
-          <form className="subscribe" onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              value={this.state.name}
-              onChange={this.handleNameChange}
-              name="NAME"
-              id="mce-FNAME"
-              className="subscribe-text"
-              placeholder="Nombre"
-              required
-            />
-            <input
-              type="email"
-              value={this.state.email}
-              onChange={this.handleEmailChange}
-              name="EMAIL"
-              id="mce-EMAIL"
-              className="subscribe-email"
-              placeholder="Mail"
-              required
-            />
-            <button className="btn_sent" type="submit">
-              Suscribirse
-            </button>
-          </form>
-        </div>
+        <Form className="subscribe" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.handleNameChange}
+            name="NAME"
+            id="mce-FNAME"
+            className="subscribe-text"
+            placeholder="Nombre"
+            required
+          />
+          <input
+            type="email"
+            value={this.state.email}
+            onChange={this.handleEmailChange}
+            name="EMAIL"
+            id="mce-EMAIL"
+            className="subscribe-email"
+            placeholder="Mail"
+            required
+          />
+          <button className="btn_sent" type="submit">
+            Suscribirse
+          </button>
+        </Form>
+        <p>{this.state.message}</p>
       </>
     )
   }

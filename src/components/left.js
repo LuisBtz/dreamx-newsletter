@@ -47,7 +47,14 @@ const BackgroundSection = ({ className }) => (
                 />
                 <div className="border"></div>
               </div>
-              <Newsletter />
+              <div className="center">
+                <h2>
+                  <b>
+                    Suscríbete a nuestro Newsletter y recibe noticias y
+                    promociones de nuestros servicios!
+                  </b>
+                </h2>
+              </div>
               <div className="border-top">
                 <div className="border"></div>
                 <Image
@@ -56,6 +63,7 @@ const BackgroundSection = ({ className }) => (
                   alt="DreaMx Mail Icon"
                 />
               </div>
+              <Newsletter />
             </div>
           </div>
         </BackgroundImage>
@@ -77,7 +85,7 @@ const StyledLeftBg = styled(BackgroundSection)`
   align-items: center;
   .form-container {
     background-color: white;
-    width: 80%;
+    width: 70%;
     padding: 20px;
   }
   .mail {
