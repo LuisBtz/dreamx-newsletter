@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
+import Newsletter from "./Newsletter"
 
 const BackgroundSection = ({ className }) => (
   <StaticQuery
@@ -39,20 +40,21 @@ const BackgroundSection = ({ className }) => (
           <div className="form-container">
             <div className="top">
               <div className="border-top">
-                <Image className="mail" fluid={mailIconData} />
+                <Image
+                  className="mail"
+                  fluid={mailIconData}
+                  alt="DreaMx Mail Icon"
+                />
                 <div className="border"></div>
               </div>
-              <div className="center">
-                <h2>
-                  <b>
-                    Suscríbete a nuestro Newsletter <br></br>y recibe noticias y
-                    promociones de nuestros servicios!
-                  </b>
-                </h2>
-              </div>
+              <Newsletter />
               <div className="border-top">
                 <div className="border"></div>
-                <Image className="mail" fluid={mailIconData} />
+                <Image
+                  className="mail"
+                  fluid={mailIconData}
+                  alt="DreaMx Mail Icon"
+                />
               </div>
             </div>
           </div>
