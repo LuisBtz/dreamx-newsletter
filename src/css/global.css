@@ -10,6 +10,7 @@
 
 body {
   font-size: 24px;
+  background-color: white;
 }
 
 *:focus {
@@ -21,4 +22,12 @@ strong,
 button {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
+}
+*::-moz-selection,
+*::-moz-selection {
+  background-color: #30e9ff;
+}
+*::selection,
+*::selection {
+  background-color: #30e9ff;
 }

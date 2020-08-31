@@ -20,6 +20,10 @@ const Form = styled.form`
     color: white;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3b3b3b;
   }
 `
 

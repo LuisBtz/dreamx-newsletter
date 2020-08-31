@@ -49,10 +49,10 @@ const BackgroundSection = ({ className }) => (
               </div>
               <div className="center">
                 <h2>
-                  <b>
+                  <strong>
                     Suscríbete a nuestro Newsletter y recibe noticias y
                     promociones de nuestros servicios!
-                  </b>
+                  </strong>
                 </h2>
               </div>
               <div className="border-top">
@@ -111,6 +111,29 @@ const StyledLeftBg = styled(BackgroundSection)`
   }
   .center h2 {
     font-size: 2vw;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    color: #30e9ff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    padding: 5px;
+  }
+  @media (max-width: 650px) {
+    width: 100%;
+    float: none;
+    height: auto;
+    .form-container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 20px;
+      width: 85%;
+    }
+    .center h2 {
+      font-size: 1.2rem;
+    }
   }
 `
 
